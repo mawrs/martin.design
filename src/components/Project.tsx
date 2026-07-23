@@ -1,5 +1,6 @@
 import type { Project as ProjectData } from "@/content/site";
 import { projectSlug } from "@/lib/projectSlug";
+import { HomeNavLink } from "./HomeNavLink";
 import { MediaItem } from "./MediaItem";
 
 export function Project({
@@ -15,9 +16,7 @@ export function Project({
     <section className="project" id={id}>
       <div className="project-content">
         <div className="project-text">
-          <a className="project-nav-link" href="#top">
-            martin.design
-          </a>
+          <HomeNavLink />
           {projects.map((item) => {
             const itemId = projectSlug(item.title);
             const active = item.title === project.title;

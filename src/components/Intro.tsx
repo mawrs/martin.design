@@ -3,7 +3,7 @@ import { TextLink } from "./TextLink";
 
 export function Intro() {
   return (
-    <div className="project-content">
+    <div className="project-content" id="intro">
       <div className="project-text">
         <p className="brand-mark">martin.design</p>
       </div>
@@ -58,7 +58,7 @@ export function Intro() {
           >
             Transcript Shield
           </TextLink>{" "}
-          to solve the transcript bias problem.
+          to catch transcription errors before they become product decisions.
           <br />
           <br />
           <TextLink href={`mailto:${SITE.email}`}>Email</TextLink> or{" "}

@@ -4,7 +4,10 @@ import { useEffect, useRef, type RefObject, type VideoHTMLAttributes } from "rea
 import type { Media, StageLayer } from "@/content/site";
 import { registerCenterAutoplay } from "@/lib/centerAutoplay";
 
-function AutoplayVideo(props: VideoHTMLAttributes<HTMLVideoElement>) {
+function AutoplayVideo({
+  layout = "fill",
+  ...props
+}: VideoHTMLAttributes<HTMLVideoElement> & { layout?: "fill" | "portrait" }) {
   const rootRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -15,8 +18,10 @@ function AutoplayVideo(props: VideoHTMLAttributes<HTMLVideoElement>) {
     return registerCenterAutoplay(root, [video]);
   }, []);
 
+  const className = layout === "portrait" ? "media-item media-item--portrait" : "media-item";
+
   return (
-    <div ref={rootRef} className="media-item">
+    <div ref={rootRef} className={className}>
       <video ref={videoRef} muted loop playsInline preload="metadata" disableRemotePlayback {...props} />
     </div>
   );
@@ -65,7 +70,7 @@ function StageMedia({
   background: StageLayer;
   foreground: StageLayer;
   alt: string;
-  fit?: "frame" | "content";
+  fit?: "frame" | "content" | "tall";
 }) {
   const rootRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -79,8 +84,14 @@ function StageMedia({
 
   const bgVideoRef = background.type === "video" ? videoRef : undefined;
   const fgVideoRef = foreground.type === "video" ? videoRef : undefined;
-  const className =
-    fit === "content" ? "media-item media-item--stage media-item--stage-content" : "media-item media-item--stage";
+  const className = [
+    "media-item",
+    "media-item--stage",
+    fit === "content" && "media-item--stage-content",
+    fit === "tall" && "media-item--stage-tall",
+  ]
+    .filter(Boolean)
+    .join(" ");
 
   return (
     <div ref={rootRef} className={className}>
@@ -106,7 +117,7 @@ export function MediaItem({ media }: { media: Media }) {
   }
 
   if (media.type === "video") {
-    return <AutoplayVideo src={media.src} aria-label={media.alt} />;
+    return <AutoplayVideo src={media.src} aria-label={media.alt} layout={media.layout} />;
   }
 
   if (media.type === "stage") {

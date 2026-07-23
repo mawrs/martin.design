@@ -252,6 +252,7 @@ a:focus,
   padding-left: var(--space-md);
   margin-left: calc(var(--space-md) * -1);
   margin-bottom: 0;
+  font-style: italic;
 }
 
 .project-quote cite {
@@ -321,6 +322,19 @@ a:focus,
   border-radius: inherit;
 }
 
+.media-item--portrait {
+  width: fit-content;
+  max-width: 100%;
+  margin-inline: auto;
+}
+
+.media-item--portrait video {
+  width: auto;
+  max-width: 100%;
+  max-height: min(78vh, 720px);
+  object-fit: contain;
+}
+
 .media-placeholder {
   aspect-ratio: 16 / 10;
 }
@@ -366,6 +380,22 @@ a:focus,
   max-width: 42%;
   max-height: 86%;
   height: 86%;
+  object-fit: contain;
+}
+
+.media-item--stage-tall {
+  aspect-ratio: 799 / 1045;
+}
+
+.media-item--stage-tall .media-stage__foreground {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: auto;
+  max-width: 64%;
+  max-height: min(86%, 900px);
+  height: auto;
   object-fit: contain;
 }
 

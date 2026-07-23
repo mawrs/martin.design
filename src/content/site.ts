@@ -4,14 +4,14 @@ export type StageLayer =
 
 export type Media =
   | { type: "image"; src: string; alt: string }
-  | { type: "video"; src: string; alt: string }
+  | { type: "video"; src: string; alt: string; layout?: "fill" | "portrait" }
   | {
       type: "stage";
       background: StageLayer;
       foreground: StageLayer;
       alt: string;
-      /** Size the frame to the foreground instead of a fixed 16/10 crop */
-      fit?: "frame" | "content";
+      /** frame = 16/10, content = inset device, tall = full-width tall stage */
+      fit?: "frame" | "content" | "tall";
     }
   | { type: "color"; tint: string; alt: string };
 
@@ -64,14 +64,14 @@ export const PROJECTS: Project[] = [
       {
         type: "stage",
         background: { type: "image", src: "/projects/seb-background.png" },
-        foreground: { type: "video", src: "/projects/seb-deposit-mobile.MOV" },
+        foreground: { type: "video", src: "/projects/seb-mobile.mp4" },
         alt: "SouthEast Bank mobile deposit flow",
-        fit: "content",
+        fit: "tall",
       },
     ],
     sub: [
       {
-        text: "I also redesigned the loan calculator for the intake application, replacing an outdated tool buried on the homepage with one that lived inside the flow and helped applicants move forward with more confidence.",
+        text: "I also built a brand new loan calculator for the student loans, replacing an outdated tool buried on the homepage with one that lived inside the flow and helped students make decisions with more confidence.",
         media: [
           {
             type: "video",
@@ -81,6 +81,11 @@ export const PROJECTS: Project[] = [
         ],
       },
     ],
+    quote: {
+      text: "Martin is a lifesaver and we couldn't have redesigned our deposit flows without him.",
+      name: "Tom Vernette",
+      role: "CTO of SouthEast Bank",
+    },
   },
   {
     title: "Slide",
@@ -96,7 +101,7 @@ export const PROJECTS: Project[] = [
         background: { type: "image", src: "/projects/slide-background.png" },
         foreground: { type: "video", src: "/projects/slide-user-testing.mp4?v=2" },
         alt: "Slide user testing",
-        fit: "content",
+        fit: "tall",
       },
     ],
     sub: [
@@ -105,6 +110,11 @@ export const PROJECTS: Project[] = [
         media: [],
       },
     ],
+    quote: {
+      text: "Martin's approach to user-centric design is very innovative and created a stellar experience for our users.",
+      name: "Bruce Lucas",
+      role: "CEO of Slide",
+    },
   },
   {
     title: "Facebook",
@@ -154,5 +164,10 @@ export const PROJECTS: Project[] = [
         ],
       },
     ],
+    quote: {
+      text: "Martin demonstrated excellent product thinking and was a true team player during our work together.",
+      name: "Bryan Rees",
+      role: "Product Design Manager at Square",
+    },
   },
 ];
