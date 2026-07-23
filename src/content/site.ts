@@ -54,7 +54,7 @@ export const INTRO = {
 export const PROJECTS: Project[] = [
   {
     title: "SouthEast Bank",
-    lead: "At SouthEast Bank, I redesigned the Deposits intake application end-to-end, turning a high-drop-off flow into one borrowers could actually finish.",
+    lead: "A year-long initiative to systematically overhaul the Deposits intake application, one phase at a time. The result was a polished flow that felt intuitive and easy to finish.",
     media: [
       {
         type: "video",
@@ -71,7 +71,7 @@ export const PROJECTS: Project[] = [
     ],
     sub: [
       {
-        text: "I also built a brand new loan calculator for the student loans, replacing an outdated tool buried on the homepage with one that lived inside the flow and helped students make decisions with more confidence.",
+        text: "As an aside, I redesigned the Loan Calculator that educated college students on their financing options so they can make a decision with confidence.",
         media: [
           {
             type: "video",
@@ -89,7 +89,7 @@ export const PROJECTS: Project[] = [
   },
   {
     title: "Slide",
-    lead: "Slide needed a self-serve claims process so overworked agents weren't the only path forward. As Sr. Product Designer, I led the web experience for claims, policy details, and payments from start to finish.",
+    lead: "Designed the self-serve claim process for Slide to augment a lot of the workload that was being done by manual agents over the phone.",
     media: [
       {
         type: "video",
@@ -99,14 +99,14 @@ export const PROJECTS: Project[] = [
       {
         type: "stage",
         background: { type: "image", src: "/projects/slide-background.png" },
-        foreground: { type: "video", src: "/projects/slide-user-testing.mp4?v=2" },
-        alt: "Slide user testing",
+        foreground: { type: "video", src: "/projects/slide-executives.mp4" },
+        alt: "Slide executive presentation",
         fit: "tall",
       },
     ],
     sub: [
       {
-        text: "Before launch, the app was pressure-tested through user testing with customers.",
+        text: "Our team flew to Tampa, Florida to scope out the work before starting the design & development using the Google Ventures playbook.",
         media: [],
       },
     ],
@@ -118,17 +118,23 @@ export const PROJECTS: Project[] = [
   },
   {
     title: "Facebook",
-    lead: "Admins of large Public Figure Pages were drowning in daily notifications and missing the interactions that mattered. I collaborated with design, research, and product to redesign the system with smart filters, priority ranking, and custom preferences.",
+    lead: "As part of a 3-month initiative, our PED team explored ways to optimize Notifications for admins who ran multiple Facebook Pages at once.",
     media: [
       {
         type: "video",
-        src: "/projects/facebook-landscape.mp4",
+        src: "/projects/facebook-1.mp4",
         alt: "Meridian brand landscape",
       },
       {
         type: "video",
-        src: "/projects/facebook-architecture.mp4",
+        src: "/projects/facebook-2.mp4",
         alt: "Architecture brand still",
+      },
+    ],
+    sub: [
+      {
+        text: "The end result was what we now call Cross-Profile Notifications, giving admins a focused view of each Page's notifications.",
+        media: [],
       },
     ],
     quote: {
@@ -139,7 +145,7 @@ export const PROJECTS: Project[] = [
   },
   {
     title: "Square",
-    lead: "A surge in phishing attacks against sellers pushed us to rethink how email led people into the dashboard. On the Risk team, I partnered with the design system team to redesign and componentize Square's email templates for a safer, clearer experience.",
+    lead: "A surge in phishing attacks against sellers pushed us to rethink Square's emails. Before the redesign, there was no set visual identity. Each department kinda did whatever they wanted.",
     media: [
       {
         type: "video",
@@ -154,7 +160,7 @@ export const PROJECTS: Project[] = [
     ],
     sub: [
       {
-        text: "The new templates launched cleaner, more on-brand, and harder for scammers to imitate, giving sellers a more trustworthy path from inbox to dashboard.",
+        text: "On the Risk team, I partnered with the design system team to redesign and componentize the templates so emails felt safer, more on-brand, and harder for scammers to imitate.",
         media: [
           {
             type: "video",
