@@ -37,7 +37,7 @@ export const SITE = {
   title: "Martin Tejeda, Product Designer with 7 years experience",
   description:
     "I'm Martin, a Designer with 7 years experience building clear, considered interfaces. Most recently I led product design at SouthEast Bank, a platform for personalized financial solutions. I simplified insurance claims at Slide, reduced notification noise at Facebook, rebuilt email systems at Square, and continue independent work under my own name.",
-  email: "hi@martintejeda.com",
+  email: "contact@martin.design",
   linkedin: "https://www.linkedin.com/in/mawrs/",
   year: 2026,
 };
