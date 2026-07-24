@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# source master logo animations (serve webm/mp4 instead)
+/public/projects/logo-*.mov

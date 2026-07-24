@@ -45,14 +45,6 @@ export function Intro() {
           <br />
           On the side, I&apos;m building{" "}
           <TextLink
-            href="https://www.burrowapp.co"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Burrow
-          </TextLink>{" "}
-          for my local community and{" "}
-          <TextLink
             href="https://transcriptshield.com/"
             target="_blank"
             rel="noopener noreferrer"
