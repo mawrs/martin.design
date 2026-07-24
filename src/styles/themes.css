@@ -17,14 +17,19 @@
 
   --font-body: var(--p-font-regular);
   --font-emphasis: var(--p-font-medium);
+  --font-display: var(--p-font-display);
 
   --text-xs: var(--p-text-xs);
   --text-sm: var(--p-text-sm);
+  --text-base: var(--p-text-base);
   --text-md: var(--p-text-md);
   --leading-tight: var(--p-leading-tight);
+  --leading-snug: var(--p-leading-snug);
   --leading-base: var(--p-leading-base);
   --tracking-tight: var(--p-tracking-tight);
+  --weight-light: var(--p-font-weight-light);
   --weight-regular: var(--p-font-weight-regular);
+  --weight-medium: var(--p-font-weight-medium);
   --weight-semibold: var(--p-font-weight-semibold);
 
   --space-1: var(--p-space-1);

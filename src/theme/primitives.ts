@@ -19,18 +19,20 @@ export const primitives = {
     whiteA20: "rgba(255, 255, 255, 0.2)",
   },
   font: {
-    regular:
-      '"Octave Regular", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
-    medium:
-      '"Octave Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+    regular: '"Reckless", Georgia, "Times New Roman", serif',
+    medium: '"Reckless", Georgia, "Times New Roman", serif',
+    display:
+      '"Lausanne", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
   },
   text: {
-    xs: "12px",
+    xs: "14px",
     sm: "16px",
+    base: "18px",
     md: "20px",
   },
   leading: {
     tight: "22px",
+    snug: "26px",
     base: "28px",
   },
   space: {

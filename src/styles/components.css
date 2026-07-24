@@ -56,16 +56,17 @@ h1 {
 
 h2,
 h3 {
-  font-size: var(--text-sm);
-  line-height: var(--leading-tight);
+  font-size: var(--text-base);
+  line-height: var(--leading-snug);
   font-weight: var(--weight-semibold);
+  font-family: var(--font-display);
   max-width: var(--prose-max);
   margin-bottom: 0;
 }
 
 p {
-  font-size: var(--text-sm);
-  line-height: var(--leading-tight);
+  font-size: var(--text-base);
+  line-height: var(--leading-snug);
   max-width: var(--prose-max);
   margin-bottom: calc(var(--space-lg) * 1.25);
 }
@@ -80,7 +81,8 @@ a,
 .text-link {
   color: var(--color-fg);
   text-decoration: none;
-  font-family: var(--font-emphasis);
+  font-family: var(--font-body);
+  font-weight: var(--weight-semibold);
   position: relative;
   transition: color var(--duration-fast) var(--ease);
 }
@@ -187,14 +189,14 @@ a:focus,
 }
 
 .project-nav-item.is-active p + .project-quote {
-  margin-top: var(--space-md);
+  margin-top: var(--space-lg);
 }
 
 .project-nav-link {
-  font-size: var(--text-sm);
-  line-height: var(--leading-tight);
+  font-size: var(--text-base);
+  line-height: var(--leading-snug);
   font-weight: var(--weight-semibold);
-  font-family: var(--font-body);
+  font-family: var(--font-display);
   color: var(--color-fg);
   opacity: 0.35;
   text-decoration: none;
@@ -226,9 +228,9 @@ a:focus,
 .brand-mark {
   margin: 0;
   max-width: none;
-  font-family: var(--font-body);
+  font-family: var(--font-display);
   font-size: var(--text-md);
-  font-weight: var(--weight-regular);
+  font-weight: var(--weight-semibold);
   letter-spacing: var(--tracking-tight);
   line-height: var(--leading-base);
   color: var(--color-fg);
@@ -242,30 +244,27 @@ a:focus,
 
 .project-quote {
   margin: 0;
+  margin-bottom: var(--space-lg);
   display: flex;
   flex-direction: column;
-  gap: var(--space-md);
-}
-
-.project-quote p {
+  gap: var(--space-sm);
   border-left: var(--border-hairline) solid var(--color-divider-strong);
   padding-left: var(--space-md);
   margin-left: calc(var(--space-md) * -1);
+}
+
+.project-quote p {
   margin-bottom: 0;
   font-style: italic;
+  font-weight: var(--weight-regular);
+  font-size: var(--text-xs);
+  line-height: var(--leading-tight);
 }
 
 .project-quote cite {
   font-style: normal;
-}
-
-.project-quote .quote-name,
-.project-quote .quote-role {
-  display: block;
-}
-
-.project-quote .quote-name {
-  font-family: var(--font-emphasis);
+  font-size: var(--text-xs);
+  line-height: var(--leading-tight);
 }
 
 .sub-project {

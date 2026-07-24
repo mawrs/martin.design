@@ -82,7 +82,7 @@ export const PROJECTS: Project[] = [
       },
     ],
     quote: {
-      text: "Martin is a lifesaver and we couldn't have redesigned our deposit flows without him.",
+      text: "Martin was such a great addition to the team. I hope we get to work together again.",
       name: "Tom Vernette",
       role: "CTO of SouthEast Bank",
     },
@@ -111,7 +111,7 @@ export const PROJECTS: Project[] = [
       },
     ],
     quote: {
-      text: "Martin's approach to user-centric design is very innovative and created a stellar experience for our users.",
+      text: "It's amazing how quick Martin's team came in and shaped the new direction of Slide. We're very thankful.",
       name: "Bruce Lucas",
       role: "CEO of Slide",
     },
@@ -138,7 +138,7 @@ export const PROJECTS: Project[] = [
       },
     ],
     quote: {
-      text: "Martin ramped up extremely fast and made an impact immediately. He understood the need and collaborated with the rest of the team effectively.",
+      text: "Martin ramped up extremely fast and made an impact immediately. He understood our needs and collaborated with the rest of the team effectively.",
       name: "Terri McNutty",
       role: "Product Design Manager at Facebook",
     },

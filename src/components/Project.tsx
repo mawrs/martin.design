@@ -34,7 +34,7 @@ export function Project({
                       <p>{item.quote.text}</p>
                       <cite>
                         <span className="quote-name">{item.quote.name}</span>
-                        <span className="quote-role">{item.quote.role}</span>
+                        <span className="quote-role">, {item.quote.role}</span>
                       </cite>
                     </blockquote>
                   )}
