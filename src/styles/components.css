@@ -268,23 +268,22 @@ a:focus,
   object-fit: contain;
   object-position: left center;
   pointer-events: none;
+  visibility: hidden;
 }
 
+/* Only swap to video once playback is confirmed. Phones that never
+   start the intro clip keep the SVG visible. */
 .brand-mark.is-animating .brand-mark__still {
   opacity: 0;
 }
 
-.brand-mark.is-static .brand-mark__video {
-  visibility: hidden;
+.brand-mark.is-animating .brand-mark__video {
+  visibility: visible;
 }
 
 @media (prefers-reduced-motion: reduce) {
   .brand-mark__video {
     display: none;
-  }
-
-  .brand-mark.is-animating .brand-mark__still {
-    opacity: 1;
   }
 }
 
