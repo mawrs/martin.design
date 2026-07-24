@@ -34,21 +34,12 @@ export interface Project {
 
 export const SITE = {
   name: "Martin Tejeda",
-  title: "Martin Tejeda, Freelance Product Designer",
+  title: "Martin Tejeda, Product Designer with 7 years experience",
+  description:
+    "I'm Martin, a Designer with 7 years experience building clear, considered interfaces. Most recently I led product design at SouthEast Bank, a platform for personalized financial solutions. I simplified insurance claims at Slide, reduced notification noise at Facebook, rebuilt email systems at Square, and continue independent work under my own name.",
   email: "hi@martintejeda.com",
   linkedin: "https://www.linkedin.com/in/mawrs/",
   year: 2026,
-};
-
-/** Intro mirrors Tom.pe: one h1 block with inline company links */
-export const INTRO = {
-  /** JSX-friendly segments built in the page; this is the plain structure */
-  companies: [
-    { label: "Northline", href: "#" },
-    { label: "Harbor", href: "#" },
-    { label: "Meridian", href: "#" },
-    { label: "Independent", href: "#" },
-  ],
 };
 
 export const PROJECTS: Project[] = [

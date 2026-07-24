@@ -21,8 +21,17 @@ export function HomeNavLink() {
   if (!visible) return null;
 
   return (
-    <a className="project-nav-link" href="#top">
+    <button
+      type="button"
+      className="project-nav-link"
+      onClick={() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        if (window.location.hash) {
+          history.replaceState(null, "", window.location.pathname + window.location.search);
+        }
+      }}
+    >
       martin.design
-    </a>
+    </button>
   );
 }

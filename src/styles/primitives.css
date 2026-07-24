@@ -7,9 +7,17 @@
 :root {
   /* ——— Color primitives ——— */
   --p-white: #ffffff;
-  --p-gray-50: #f8f8f8;
-  --p-gray-900: #101010;
-  --p-gray-950: #000000;
+  --p-black: #000000;
+  --p-cloud: #f3f3f5;
+  --p-cloud-dark: #87867f;
+  --p-ivory-light: #faf9f5;
+  --p-oat: #ebebeb;
+  --p-stone: #cccbc8;
+  --p-smoke: #d3d6e0;
+  --p-arsenic: #3b3b43;
+  --p-phantom: #1e1e24;
+  --p-slate-dark: #141413;
+  --p-slate-medium: #3d3d3a;
 
   --p-blue-400: #3b82f6;
   --p-blue-500: #0070f3;

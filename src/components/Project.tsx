@@ -2,6 +2,7 @@ import type { Project as ProjectData } from "@/content/site";
 import { projectSlug } from "@/lib/projectSlug";
 import { HomeNavLink } from "./HomeNavLink";
 import { MediaItem } from "./MediaItem";
+import { ProjectNavLink } from "./ProjectNavLink";
 
 export function Project({
   project,
@@ -43,9 +44,9 @@ export function Project({
             }
 
             return (
-              <a key={item.title} className="project-nav-link" href={`#${itemId}`}>
+              <ProjectNavLink key={item.title} id={itemId}>
                 {item.title}
-              </a>
+              </ProjectNavLink>
             );
           })}
         </div>

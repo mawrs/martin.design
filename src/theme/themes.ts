@@ -6,9 +6,12 @@ export interface Theme {
   id: ThemeId;
   color: {
     bg: string;
-    fg: string;
+    primaryText: string;
+    secondaryText: string;
+    disabledText: string;
     accent: string;
     surfaceSubtle: string;
+    border: string;
     divider: string;
     dividerStrong: string;
     selectionBg: string;
@@ -29,50 +32,52 @@ export const themes: Record<ThemeId, Theme> = {
   light: {
     id: "light",
     color: {
-      bg: c.gray50,
-      fg: c.gray900,
+      bg: c.ivoryLight,
+      primaryText: c.slateDark,
+      secondaryText: c.arsenic,
+      disabledText: c.stone,
       accent: c.blue500,
       surfaceSubtle: c.blackA4,
-      divider: c.blackA8,
-      dividerStrong: c.blackA20,
-      selectionBg: c.gray900,
-      selectionFg: c.gray50,
+      border: c.oat,
+      divider: c.oat,
+      dividerStrong: c.oat,
+      selectionBg: c.slateDark,
+      selectionFg: c.ivoryLight,
     },
     font: {
       body: font.regular,
       emphasis: font.medium,
     },
     meta: {
-      themeColor: c.gray50,
+      themeColor: c.ivoryLight,
     },
   },
   dark: {
     id: "dark",
     color: {
-      bg: c.gray900,
-      fg: c.gray50,
+      bg: c.slateDark,
+      primaryText: c.ivoryLight,
+      secondaryText: c.smoke,
+      disabledText: c.cloudDark,
       accent: c.blue400,
       surfaceSubtle: c.whiteA4,
-      divider: c.whiteA8,
-      dividerStrong: c.whiteA20,
-      selectionBg: c.gray50,
-      selectionFg: c.gray900,
+      border: c.slateMedium,
+      divider: c.slateMedium,
+      dividerStrong: c.slateMedium,
+      selectionBg: c.ivoryLight,
+      selectionFg: c.slateDark,
     },
     font: {
       body: font.regular,
       emphasis: font.medium,
     },
     meta: {
-      themeColor: c.gray900,
+      themeColor: c.slateDark,
     },
   },
 };
 
 export const THEME_STORAGE_KEY = "theme";
-
-export function getTheme(id: ThemeId): Theme {
-  return themes[id];
-}
 
 export function applyTheme(id: ThemeId) {
   if (typeof document === "undefined") return;

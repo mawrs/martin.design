@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { SITE } from "@/content/site";
+import { primitives } from "@/theme/primitives";
 
 export const metadata: Metadata = {
   title: SITE.title,
-  description:
-    "Martin Tejeda is a Freelance Product Designer. Work across product, brand, and independent experiments.",
+  description: SITE.description,
 };
 
 export default function RootLayout({
@@ -20,7 +20,7 @@ export default function RootLayout({
           }}
         />
         <meta name="color-scheme" content="light dark" />
-        <meta name="theme-color" content="#F8F8F8" />
+        <meta name="theme-color" content={primitives.color.ivoryLight} />
       </head>
       <body>{children}</body>
     </html>

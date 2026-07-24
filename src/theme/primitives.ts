@@ -6,9 +6,17 @@
 export const primitives = {
   color: {
     white: "#ffffff",
-    gray50: "#f8f8f8",
-    gray900: "#101010",
-    gray950: "#000000",
+    black: "#000000",
+    cloud: "#f3f3f5",
+    cloudDark: "#87867f",
+    ivoryLight: "#faf9f5",
+    oat: "#ebebeb",
+    stone: "#cccbc8",
+    smoke: "#d3d6e0",
+    arsenic: "#3b3b43",
+    phantom: "#1e1e24",
+    slateDark: "#141413",
+    slateMedium: "#3d3d3a",
     blue400: "#3b82f6",
     blue500: "#0070f3",
     blackA4: "rgba(0, 0, 0, 0.04)",
@@ -60,6 +68,3 @@ export const primitives = {
     base: "0.25s",
   },
 } as const;
-
-export type PrimitiveColor = keyof typeof primitives.color;
-export type PrimitiveSpace = keyof typeof primitives.space;
