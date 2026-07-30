@@ -185,10 +185,6 @@ a:focus,
   margin-top: var(--space-md);
 }
 
-.project-nav-item.is-active p + .project-quote {
-  margin-top: var(--space-lg);
-}
-
 .project-nav-link {
   font-size: var(--text-base);
   line-height: var(--leading-snug);
@@ -291,35 +287,6 @@ a:focus,
   display: flex;
   flex-direction: column;
   gap: var(--space-lg);
-}
-
-.project-quote {
-  margin: 0;
-  margin-bottom: var(--space-lg);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-sm);
-  border-left: var(--border-hairline) solid var(--color-border);
-  padding-left: var(--space-md);
-  margin-left: calc(var(--space-md) * -1);
-}
-
-.project-quote p {
-  margin-bottom: 0;
-  font-style: italic;
-  font-weight: var(--weight-regular);
-  font-size: var(--text-xs);
-  line-height: var(--leading-tight);
-}
-
-.project-quote cite {
-  font-style: normal;
-  font-size: var(--text-xs);
-  line-height: var(--leading-tight);
-}
-
-.project-quote .quote-name {
-  font-weight: var(--weight-medium);
 }
 
 @media (max-width: 1024px) {

@@ -6,16 +6,15 @@ import { Divider } from "./Divider";
 export function Projects({ projects }: { projects: ProjectData[] }) {
   return (
     <div className="projects">
-      {projects.map((project, i) => (
-        <div key={project.title}>
-          <Project
-            project={project}
-            projects={projects}
-            id={projectSlug(project.title)}
-          />
-          {i < projects.length - 1 && <Divider />}
-        </div>
-      ))}
+      {projects.map((project, i) => {
+        const id = projectSlug(project);
+        return (
+          <div key={id}>
+            <Project project={project} projects={projects} id={id} />
+            {i < projects.length - 1 && <Divider />}
+          </div>
+        );
+      })}
     </div>
   );
 }

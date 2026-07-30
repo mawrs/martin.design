@@ -22,14 +22,11 @@ export interface SubProject {
 
 export interface Project {
   title: string;
+  /** Unique section id when title is shared across projects */
+  slug?: string;
   lead: string;
   media: Media[];
   sub?: SubProject[];
-  quote?: {
-    text: string;
-    name: string;
-    role: string;
-  };
 }
 
 export const SITE = {
@@ -44,8 +41,9 @@ export const SITE = {
 
 export const PROJECTS: Project[] = [
   {
-    title: "SouthEast Bank",
-    lead: "A year-long initiative to systematically overhaul the Deposits intake application, one phase at a time. The result was a polished flow that felt intuitive and easy to finish.",
+    title: "Bank account opening",
+    slug: "southeast-bank",
+    lead: "Opening an account meant sitting with a branch manager while they clicked through an internal tool on your behalf. There was no version a customer could use alone.\n\nThey hired me to make it customer facing and to let someone open checking, savings, and a CD in one pass. That second part turned out to be a technical nightmare, so we scoped down to a single product flow and got one thing working properly instead of three things half working.\n\nI designed the whole deposit flow, from the first screen to funding, and I designed the states around it so a failed bank link, a transfer sitting pending for days, and someone returning a week later all had a defined screen.\n\nThat single product flow is the intake their customers use today.",
     media: [
       {
         type: "video",
@@ -60,27 +58,23 @@ export const PROJECTS: Project[] = [
         fit: "tall",
       },
     ],
-    sub: [
-      {
-        text: "As an aside, I redesigned the Loan Calculator that educated college students on their financing options so they can make a decision with confidence.",
-        media: [
-          {
-            type: "video",
-            src: "/projects/loan-calculator.mp4",
-            alt: "Student loan calculator",
-          },
-        ],
-      },
-    ],
-    quote: {
-      text: "Martin was such a great addition to the team. I hope we get to work together again.",
-      name: "Tom Vernette",
-      role: "CTO of SouthEast Bank",
-    },
   },
   {
-    title: "Slide",
-    lead: "Designed the self-serve claim process for Slide to augment a lot of the workload that was being done by manual agents over the phone.",
+    title: "Loan calculator",
+    slug: "southeast-bank-loan-calculator",
+    lead: "Students were abandoning the loan application partway through, and the bank assumed it was the form. I talked to students and it was the rates. They were being asked to choose between fixed and variable without understanding what either one would cost them, so they closed the tab rather than guess.\n\nI designed a calculator that showed both rate types side by side over the life of the loan, so a student could see what variable actually means when it moves and pick with a reason instead of a guess.\n\nRebuilding the entire screen would have taken months we didn't have, so we placed it under the existing loan options where students were already deciding.",
+    media: [
+      {
+        type: "video",
+        src: "/projects/loan-calculator.mp4",
+        alt: "Student loan calculator",
+      },
+    ],
+  },
+  {
+    title: "Insurance claims intake",
+    slug: "slide",
+    lead: "At Slide, insurance claims were being processed over the phone, an average of 20 minutes per claim.\n\nWe spent a week in Tampa learning how agents triaged a claim over the phone, and turned that into a flow customers could complete themselves on the Slide website.\n\nI owned intake and its edge cases, which meant claims with more than one kind of damage, filings from someone who isn't the policyholder, and a lookup that fails halfway through.\n\nWithin six months, 45% of claims came in without a phone call.",
     media: [
       {
         type: "video",
@@ -95,21 +89,11 @@ export const PROJECTS: Project[] = [
         fit: "tall",
       },
     ],
-    sub: [
-      {
-        text: "Our team flew to Tampa, Florida to scope out the work before starting the design & development using the Google Ventures playbook.",
-        media: [],
-      },
-    ],
-    quote: {
-      text: "It's amazing how quick Martin's team came in and shaped the new direction of Slide. We're very thankful.",
-      name: "Bruce Lucas",
-      role: "CEO of Slide",
-    },
   },
   {
-    title: "Facebook",
-    lead: "As part of a 3-month initiative, our PED team explored ways to optimize Notifications for admins who ran multiple Facebook Pages at once.",
+    title: "Cross-profile notifications",
+    slug: "facebook",
+    lead: "Admins running three or more Pages got every notification in one stream, and they kept missing comments that needed a same-day answer.\n\nNotification ranking belonged to another team, so we worked inside the existing schema and shipped switching without the unified inbox we had sketched.\n\nI owned the notification settings, which meant deciding which Pages an admin hears from at all and which kinds of notifications come through from each one, so someone managing three Pages could turn off the ones they check weekly and still catch a comment on the one that matters.\n\nIt shipped as Cross-Profile Notifications.",
     media: [
       {
         type: "video",
@@ -122,21 +106,11 @@ export const PROJECTS: Project[] = [
         alt: "Architecture brand still",
       },
     ],
-    sub: [
-      {
-        text: "The end result was what we now call Cross-Profile Notifications, giving admins a focused view of each Page's notifications.",
-        media: [],
-      },
-    ],
-    quote: {
-      text: "Martin ramped up extremely fast and made an impact immediately. He understood our needs and collaborated with the rest of the team effectively.",
-      name: "Terri McNutty",
-      role: "Product Design Manager at Facebook",
-    },
   },
   {
-    title: "Square",
-    lead: "A surge in phishing attacks against sellers pushed us to rethink Square's emails. Before the redesign, there was no set visual identity. Each department kinda did whatever they wanted.",
+    title: "Email design",
+    slug: "square",
+    lead: "Sellers reported a spike in phishing attempts in 2020. On the Risk team we looked into it and found part of the problem was coming from us, because every department had built its own email templates and no two Square emails looked alike. A seller had no reliable way to tell a real one from a fake.\n\nNobody could force other teams to migrate, so I worked with the design system team on a component library and we moved the highest volume emails over ourselves as proof it worked.\n\nI owned the sender identity rules and the templates nobody wanted, which meant dynamic content, plain text fallbacks, and emails that still read as real with images blocked.\n\nFeel free to reach out to learn more about the results.",
     media: [
       {
         type: "video",
@@ -148,23 +122,11 @@ export const PROJECTS: Project[] = [
         src: "/projects/square-example-1.mp4",
         alt: "Writing and notes",
       },
-    ],
-    sub: [
       {
-        text: "On the Risk team, I partnered with the design system team to redesign and componentize the templates so emails felt safer, more on-brand, and harder for scammers to imitate.",
-        media: [
-          {
-            type: "video",
-            src: "/projects/square-example-2.mp4",
-            alt: "Design process still",
-          },
-        ],
+        type: "video",
+        src: "/projects/square-example-2.mp4",
+        alt: "Design process still",
       },
     ],
-    quote: {
-      text: "Martin demonstrated excellent product thinking and was a true team player during our work together.",
-      name: "Bryan Rees",
-      role: "Product Design Manager at Square",
-    },
   },
 ];

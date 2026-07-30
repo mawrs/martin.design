@@ -19,32 +19,25 @@ export function Project({
         <div className="project-text">
           <HomeNavLink />
           {projects.map((item) => {
-            const itemId = projectSlug(item.title);
-            const active = item.title === project.title;
+            const itemId = projectSlug(item);
+            const active = itemId === id;
 
             if (active) {
               return (
-                <div key={item.title} className="project-nav-item is-active">
+                <div key={itemId} className="project-nav-item is-active">
                   <h2>{item.title}</h2>
-                  <p>{item.lead}</p>
+                  {item.lead.split("\n\n").map((para) => (
+                    <p key={para}>{para}</p>
+                  ))}
                   {item.sub?.map((sub) => (
                     <p key={sub.text}>{sub.text}</p>
                   ))}
-                  {item.quote && (
-                    <blockquote className="project-quote">
-                      <p>{item.quote.text}</p>
-                      <cite>
-                        <span className="quote-name">{item.quote.name}</span>
-                        <span className="quote-role">, {item.quote.role}</span>
-                      </cite>
-                    </blockquote>
-                  )}
                 </div>
               );
             }
 
             return (
-              <ProjectNavLink key={item.title} id={itemId}>
+              <ProjectNavLink key={itemId} id={itemId}>
                 {item.title}
               </ProjectNavLink>
             );
