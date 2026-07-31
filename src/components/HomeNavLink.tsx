@@ -2,11 +2,17 @@
 
 import { useEffect, useState } from "react";
 
-export function HomeNavLink() {
+export function HomeNavLink({
+  introId = "intro",
+  label = "martin.design",
+}: {
+  introId?: string;
+  label?: string;
+}) {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const intro = document.getElementById("intro");
+    const intro = document.getElementById(introId);
     if (!intro) return;
 
     const observer = new IntersectionObserver(
@@ -16,7 +22,7 @@ export function HomeNavLink() {
 
     observer.observe(intro);
     return () => observer.disconnect();
-  }, []);
+  }, [introId]);
 
   if (!visible) return null;
 
@@ -31,7 +37,7 @@ export function HomeNavLink() {
         }
       }}
     >
-      martin.design
+      {label}
     </button>
   );
 }

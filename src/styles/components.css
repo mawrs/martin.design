@@ -215,12 +215,112 @@ a:focus,
   color: var(--color-primary-text);
 }
 
+.site-nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.site-nav__brand {
+  display: block;
+  width: fit-content;
+  text-decoration: none;
+  color: inherit;
+  border-bottom: none;
+  position: relative;
+  transition: opacity var(--duration-fast) var(--ease);
+}
+
+.site-nav__brand::after {
+  content: none;
+}
+
+.site-nav__brand.is-muted {
+  opacity: 0.35;
+}
+
+.site-nav__brand.is-muted:hover,
+.site-nav__brand.is-muted:focus {
+  opacity: 1;
+  border-bottom: none;
+  outline: none;
+}
+
+.site-nav__brand:hover,
+.site-nav__brand:focus {
+  border-bottom: none;
+  outline: none;
+}
+
+.site-nav__links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.site-nav__link {
+  font-size: var(--text-base);
+  line-height: var(--leading-snug);
+  font-weight: var(--weight-semibold);
+  font-family: var(--font-display);
+  color: var(--color-disabled-text);
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease);
+  position: relative;
+  width: fit-content;
+}
+
+.site-nav__link::after {
+  content: none;
+}
+
+.site-nav__link:hover,
+.site-nav__link:focus {
+  color: var(--color-primary-text);
+  border-bottom: none;
+  outline: none;
+}
+
+.site-nav__link.is-active {
+  color: var(--color-primary-text);
+}
+
 .header-text {
   max-width: none;
   position: sticky;
   top: var(--space-md);
   height: fit-content;
   align-self: start;
+}
+
+.about-intro-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.about-intro-block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.about-intro-copy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.about-intro-body p {
+  font-size: var(--text-md);
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--leading-base);
+  font-weight: var(--weight-regular);
+  font-family: var(--font-body);
+  color: var(--color-primary-text);
+  max-width: none;
+  width: 100%;
+  margin-bottom: 0;
 }
 
 .brand-mark {

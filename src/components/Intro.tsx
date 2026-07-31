@@ -1,12 +1,12 @@
 import { SITE } from "@/content/site";
-import { BrandMark } from "./BrandMark";
+import { SiteNav } from "./SiteNav";
 import { TextLink } from "./TextLink";
 
 export function Intro() {
   return (
     <div className="project-content" id="intro">
       <div className="project-text">
-        <BrandMark />
+        <SiteNav active="work" />
       </div>
       <div className="header-text">
         <h1>
