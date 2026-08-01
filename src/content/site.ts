@@ -66,6 +66,7 @@ export const PROJECTS: Project[] = [
     title: "Cross-profile notifications",
     slug: "facebook",
     logo: "/projects/facebook-logo.svg",
+    logoHeight: 19,
     lead: "Admins running three or more Pages got every notification in one stream, and they kept missing comments that needed a same-day answer.\n\nNotification ranking belonged to another team, so we worked inside the existing schema and shipped switching without the unified inbox we had sketched.\n\nI owned the notification settings, which meant deciding which Pages an admin hears from at all and which kinds of notifications come through from each one, so someone managing three Pages could turn off the ones they check weekly and still catch a comment on the one that matters.\n\nIt shipped as Cross-Profile Notifications.",
     media: [
       {
@@ -84,6 +85,7 @@ export const PROJECTS: Project[] = [
     title: "Email design",
     slug: "square",
     logo: "/projects/square-logo.svg",
+    logoHeight: 19,
     lead: "Sellers reported a spike in phishing attempts in 2020. On the Risk team we looked into it and found part of the problem was coming from us, because every department had built its own email templates and no two Square emails looked alike. A seller had no reliable way to tell a real one from a fake.\n\nNobody could force other teams to migrate, so I worked with the design system team on a component library and we moved the highest volume emails over ourselves as proof it worked.\n\nI owned the sender identity rules and the templates nobody wanted, which meant dynamic content, plain text fallbacks, and emails that still read as real with images blocked.\n\nFeel free to reach out to learn more about the results.",
     media: [
       {
@@ -107,7 +109,7 @@ export const PROJECTS: Project[] = [
     title: "Insurance claims intake",
     slug: "slide",
     logo: "/projects/slide-logo.svg",
-    logoHeight: 20,
+    logoHeight: 18,
     lead: "At Slide, insurance claims were being processed over the phone, an average of 20 minutes per claim.\n\nWe spent a week in Tampa learning how agents triaged a claim over the phone, and turned that into a flow customers could complete themselves on the Slide website.\n\nI owned intake and its edge cases, which meant claims with more than one kind of damage, filings from someone who isn't the policyholder, and a lookup that fails halfway through.\n\nWithin six months, 45% of claims came in without a phone call.",
     media: [
       {
@@ -128,7 +130,7 @@ export const PROJECTS: Project[] = [
     title: "Bank account opening",
     slug: "southeast-bank",
     logo: "/projects/seb-logo.svg",
-    logoHeight: 20,
+    logoHeight: 18,
     lead: "Opening an account meant sitting with a branch manager while they clicked through an internal tool on your behalf. There was no version a customer could use alone.\n\nThey hired me to make it customer facing and to let someone open checking, savings, and a CD in one pass. That second part turned out to be a technical nightmare, so we scoped down to a single product flow and got one thing working properly instead of three things half working.\n\nI designed the whole deposit flow, from the first screen to funding, and I designed the states around it so a failed bank link, a transfer sitting pending for days, and someone returning a week later all had a defined screen.\n\nThat single product flow is the intake their customers use today.",
     media: [
       {
@@ -149,7 +151,7 @@ export const PROJECTS: Project[] = [
     title: "Loan calculator",
     slug: "southeast-bank-loan-calculator",
     logo: "/projects/seb-logo.svg",
-    logoHeight: 20,
+    logoHeight: 18,
     lead: "Students were abandoning the loan application partway through, and the bank assumed it was the form. I talked to students and it was the rates. They were being asked to choose between fixed and variable without understanding what either one would cost them, so they closed the tab rather than guess.\n\nI designed a calculator that showed both rate types side by side over the life of the loan, so a student could see what variable actually means when it moves and pick with a reason instead of a guess.\n\nRebuilding the entire screen would have taken months we didn't have, so we placed it under the existing loan options where students were already deciding.",
     media: [
       {

@@ -1,13 +1,18 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { ProjectTitle } from "./ProjectTitle";
 
 export function HomeNavLink({
   introId = "intro",
   label = "martin.design",
+  logo = "/projects/md-logo.svg",
+  logoHeight = 20,
 }: {
   introId?: string;
   label?: string;
+  logo?: string;
+  logoHeight?: number;
 }) {
   const [visible, setVisible] = useState(false);
 
@@ -37,7 +42,7 @@ export function HomeNavLink({
         }
       }}
     >
-      {label}
+      <ProjectTitle title={label} logo={logo} logoHeight={logoHeight} />
     </button>
   );
 }
