@@ -55,8 +55,8 @@ export const ABOUT = {
   ],
   /** Media shown after each paragraph block except the last */
   media: [
-    { type: "video" as const, src: "/projects/fishing.mp4", alt: "Fly fishing the Provo river in Utah" },
-    { type: "video" as const, src: "/projects/UB-sprint.mp4", alt: "Recap of sprint with the Slide team" },
+    { type: "image" as const, src: "/projects/fishing.webp", alt: "Fly fishing in Montana" },
+    { type: "image" as const, src: "/projects/underbelly.webp", alt: "Underbelly team photo" },
     { type: "video" as const, src: "/projects/ts-demo.mp4", alt: "Transcript Shield demo" },
   ] satisfies Media[],
 };
