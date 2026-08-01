@@ -1,13 +1,38 @@
 "use client";
 
-import { useEffect, useRef, type RefObject, type VideoHTMLAttributes } from "react";
+import { useEffect, useRef, type ReactNode, type RefObject, type VideoHTMLAttributes } from "react";
 import type { Media, StageLayer } from "@/content/site";
 import { registerCenterAutoplay } from "@/lib/centerAutoplay";
 
+function MediaFrame({
+  caption,
+  children,
+  className = "media-item",
+  rootRef,
+}: {
+  caption: string;
+  children: ReactNode;
+  className?: string;
+  rootRef?: RefObject<HTMLDivElement | null>;
+}) {
+  return (
+    <figure className="media-figure">
+      <div ref={rootRef} className={className}>
+        {children}
+      </div>
+      {caption ? <figcaption className="media-caption">{caption}</figcaption> : null}
+    </figure>
+  );
+}
+
 function AutoplayVideo({
   layout = "fill",
+  caption,
   ...props
-}: VideoHTMLAttributes<HTMLVideoElement> & { layout?: "fill" | "portrait" }) {
+}: VideoHTMLAttributes<HTMLVideoElement> & {
+  layout?: "fill" | "portrait";
+  caption: string;
+}) {
   const rootRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -21,9 +46,9 @@ function AutoplayVideo({
   const className = layout === "portrait" ? "media-item media-item--portrait" : "media-item";
 
   return (
-    <div ref={rootRef} className={className}>
+    <MediaFrame caption={caption} className={className} rootRef={rootRef}>
       <video ref={videoRef} muted loop playsInline preload="metadata" disableRemotePlayback {...props} />
-    </div>
+    </MediaFrame>
   );
 }
 
@@ -94,7 +119,7 @@ function StageMedia({
     .join(" ");
 
   return (
-    <div ref={rootRef} className={className}>
+    <MediaFrame caption={alt} className={className} rootRef={rootRef}>
       <StageLayerView layer={background} className="media-stage__background" videoRef={bgVideoRef} />
       <StageLayerView
         layer={foreground}
@@ -102,22 +127,29 @@ function StageMedia({
         alt={alt}
         videoRef={fgVideoRef}
       />
-    </div>
+    </MediaFrame>
   );
 }
 
 export function MediaItem({ media }: { media: Media }) {
   if (media.type === "image") {
     return (
-      <div className="media-item">
+      <MediaFrame caption={media.alt}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={media.src} alt={media.alt} loading="lazy" draggable={false} />
-      </div>
+      </MediaFrame>
     );
   }
 
   if (media.type === "video") {
-    return <AutoplayVideo src={media.src} aria-label={media.alt} layout={media.layout} />;
+    return (
+      <AutoplayVideo
+        src={media.src}
+        aria-label={media.alt}
+        layout={media.layout}
+        caption={media.alt}
+      />
+    );
   }
 
   if (media.type === "stage") {
@@ -132,13 +164,13 @@ export function MediaItem({ media }: { media: Media }) {
   }
 
   return (
-    <div className="media-item">
+    <MediaFrame caption={media.alt}>
       <div
         className="media-placeholder"
         style={{ background: media.tint }}
         role="img"
         aria-label={media.alt}
       />
-    </div>
+    </MediaFrame>
   );
 }

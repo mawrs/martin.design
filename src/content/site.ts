@@ -24,6 +24,10 @@ export interface Project {
   title: string;
   /** Unique section id when title is shared across projects */
   slug?: string;
+  /** Optional mark shown beside the project title */
+  logo?: string;
+  /** Logo height in px; width scales with aspect ratio. Default 22. */
+  logoHeight?: number;
   lead: string;
   media: Media[];
   sub?: SubProject[];
@@ -45,67 +49,77 @@ export const ABOUT = {
     "Product designer with a background in health — agency work, independent practice, and a focus on clear interfaces.",
   paragraphs: [
     "I'm Martin Tejeda. Born and raised in San Diego, and now residing in Salt Lake City where I'm slowly turning into a snowboarder and a fly fisherman.",
-    "My design career started at a creative agency called Underbelly. People hear agency and picture a room full of designers, but we had four departments — design, marketing, development, and video production. I'd be working on notification settings for Facebook and look up to see a commercial being shot across the room.\n\nWe also built internal tools during our down time, including a project management app that predicted the earned value of a contract as we worked on it and told us whether we'd deliver on time based on our weekly updates. That's the kind of problem I keep getting pulled toward, where the design work and the business math turn out to be the same problem.",
-    "After two years I took a risk and went out on my own. I ran a one-person studio and did the research, the design, and the development myself. If a client needed copywriting or motion design, I was there for that too. Somewhere in the middle of that I started building my own products. Transcript Shield is one of them, a browser based tool that cleans up interview transcripts and strips out the PII before they get shared, and it exists because I kept doing that by hand on my own research.\n\nShipping something alone means finding ways to move faster, so I've built AI into most of my process. It handles the first pass on research synthesis, early screens, and working code, which gets me to something clickable in a day and leaves the rest of the week to sharpen the visual details.",
+    "My design career started at a creative agency called Underbelly. People hear agency and picture a room full of designers, but we had four departments — design, marketing, development, and video production. On occasion, a PED team would travel to a client's headquarters and conduct a week-long sprint to uncover the root problems.",
+    "After two years I took a risk and went out on my own. I ran a one-person studio and did the research, the design, and the development myself. If a client needed copywriting or motion design, I was there for that too. Somewhere in the middle of that I started building my own products. Transcript Shield is one of them, a tool that cleans up interview transcripts and strips out the PII before they get shared. I have to give a lot of credit to the advancements in AI for allowing me to create such tightly integrated AI workflows for research, design, and development.",
     "Six years between the agency and my own studio made me curious about every discipline that goes into a company. I learned early that they all coexist, and that the design matters as much as the copy, which matters as much as the backend infrastructure holding it up.\n\nI'm dedicating the second half of 2026 to exploring in-house roles at companies that want a generalist who loves design and cares about the details while staying aware of the day to day work that brings it all together. Reach out and we can chat over a virtual coffee.",
   ],
+  /** Media shown after each paragraph block except the last */
+  media: [
+    { type: "video" as const, src: "/projects/fishing.mp4", alt: "Fly fishing the Provo river in Utah" },
+    { type: "video" as const, src: "/projects/UB-sprint.mp4", alt: "Recap of sprint with the Slide team" },
+    { type: "video" as const, src: "/projects/ts-demo.mp4", alt: "Transcript Shield demo" },
+  ] satisfies Media[],
 };
 
 export const PROJECTS: Project[] = [
   {
     title: "Cross-profile notifications",
     slug: "facebook",
+    logo: "/projects/facebook-logo.svg",
     lead: "Admins running three or more Pages got every notification in one stream, and they kept missing comments that needed a same-day answer.\n\nNotification ranking belonged to another team, so we worked inside the existing schema and shipped switching without the unified inbox we had sketched.\n\nI owned the notification settings, which meant deciding which Pages an admin hears from at all and which kinds of notifications come through from each one, so someone managing three Pages could turn off the ones they check weekly and still catch a comment on the one that matters.\n\nIt shipped as Cross-Profile Notifications.",
     media: [
       {
         type: "video",
         src: "/projects/facebook-1.mp4",
-        alt: "Meridian brand landscape",
+        alt: "Filtering through notifications",
       },
       {
         type: "video",
         src: "/projects/facebook-2.mp4",
-        alt: "Architecture brand still",
+        alt: "Managing the Page settings",
       },
     ],
   },
   {
     title: "Email design",
     slug: "square",
+    logo: "/projects/square-logo.svg",
     lead: "Sellers reported a spike in phishing attempts in 2020. On the Risk team we looked into it and found part of the problem was coming from us, because every department had built its own email templates and no two Square emails looked alike. A seller had no reliable way to tell a real one from a fake.\n\nNobody could force other teams to migrate, so I worked with the design system team on a component library and we moved the highest volume emails over ourselves as proof it worked.\n\nI owned the sender identity rules and the templates nobody wanted, which meant dynamic content, plain text fallbacks, and emails that still read as real with images blocked.\n\nFeel free to reach out to learn more about the results.",
     media: [
       {
         type: "video",
         src: "/projects/square-email.mp4",
-        alt: "Abstract generative study",
+        alt: "Opening a new Square marketing email",
       },
       {
         type: "video",
         src: "/projects/square-example-1.mp4",
-        alt: "Writing and notes",
+        alt: "Before & after of a marketing email",
       },
       {
         type: "video",
         src: "/projects/square-example-2.mp4",
-        alt: "Design process still",
+        alt: "Before & after of a marketing email",
       },
     ],
   },
   {
     title: "Insurance claims intake",
     slug: "slide",
+    logo: "/projects/slide-logo.svg",
+    logoHeight: 20,
     lead: "At Slide, insurance claims were being processed over the phone, an average of 20 minutes per claim.\n\nWe spent a week in Tampa learning how agents triaged a claim over the phone, and turned that into a flow customers could complete themselves on the Slide website.\n\nI owned intake and its edge cases, which meant claims with more than one kind of damage, filings from someone who isn't the policyholder, and a lookup that fails halfway through.\n\nWithin six months, 45% of claims came in without a phone call.",
     media: [
       {
         type: "video",
         src: "/projects/slide-web-app.mp4",
-        alt: "Brand website mockup",
+        alt: "Slide self-service claims process",
       },
       {
         type: "stage",
         background: { type: "image", src: "/projects/slide-background.png" },
         foreground: { type: "video", src: "/projects/slide-executives.mp4" },
-        alt: "Slide executive presentation",
+        alt: "Week-long sprint with Slide executives",
         fit: "tall",
       },
     ],
@@ -113,18 +127,20 @@ export const PROJECTS: Project[] = [
   {
     title: "Bank account opening",
     slug: "southeast-bank",
+    logo: "/projects/seb-logo.svg",
+    logoHeight: 20,
     lead: "Opening an account meant sitting with a branch manager while they clicked through an internal tool on your behalf. There was no version a customer could use alone.\n\nThey hired me to make it customer facing and to let someone open checking, savings, and a CD in one pass. That second part turned out to be a technical nightmare, so we scoped down to a single product flow and got one thing working properly instead of three things half working.\n\nI designed the whole deposit flow, from the first screen to funding, and I designed the states around it so a failed bank link, a transfer sitting pending for days, and someone returning a week later all had a defined screen.\n\nThat single product flow is the intake their customers use today.",
     media: [
       {
         type: "video",
         src: "/projects/seb-deposit-desktop.mp4",
-        alt: "SouthEast Bank intake application",
+        alt: "Desktop intake application",
       },
       {
         type: "stage",
         background: { type: "image", src: "/projects/seb-background.png" },
         foreground: { type: "video", src: "/projects/seb-mobile.mp4" },
-        alt: "SouthEast Bank mobile deposit flow",
+        alt: "Mobile intake application",
         fit: "tall",
       },
     ],
@@ -132,6 +148,8 @@ export const PROJECTS: Project[] = [
   {
     title: "Loan calculator",
     slug: "southeast-bank-loan-calculator",
+    logo: "/projects/seb-logo.svg",
+    logoHeight: 20,
     lead: "Students were abandoning the loan application partway through, and the bank assumed it was the form. I talked to students and it was the rates. They were being asked to choose between fixed and variable without understanding what either one would cost them, so they closed the tab rather than guess.\n\nI designed a calculator that showed both rate types side by side over the life of the loan, so a student could see what variable actually means when it moves and pick with a reason instead of a guess.\n\nRebuilding the entire screen would have taken months we didn't have, so we placed it under the existing loan options where students were already deciding.",
     media: [
       {

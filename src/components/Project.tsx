@@ -3,6 +3,7 @@ import { projectSlug } from "@/lib/projectSlug";
 import { HomeNavLink } from "./HomeNavLink";
 import { MediaItem } from "./MediaItem";
 import { ProjectNavLink } from "./ProjectNavLink";
+import { ProjectTitle } from "./ProjectTitle";
 
 export function Project({
   project,
@@ -25,7 +26,12 @@ export function Project({
             if (active) {
               return (
                 <div key={itemId} className="project-nav-item is-active">
-                  <h2>{item.title}</h2>
+                  <ProjectTitle
+                    title={item.title}
+                    logo={item.logo}
+                    logoHeight={item.logoHeight}
+                    as="h2"
+                  />
                   {item.lead.split("\n\n").map((para) => (
                     <p key={para}>{para}</p>
                   ))}
@@ -38,17 +44,29 @@ export function Project({
 
             return (
               <ProjectNavLink key={itemId} id={itemId}>
-                {item.title}
+                <ProjectTitle
+                  title={item.title}
+                  logo={item.logo}
+                  logoHeight={item.logoHeight}
+                />
               </ProjectNavLink>
             );
           })}
         </div>
         <div className="project-media">
-          {project.media.map((m) => (
-            <MediaItem key={m.alt} media={m} />
+          {project.media.map((m, i) => (
+            <MediaItem
+              key={m.type === "image" || m.type === "video" ? m.src : `${m.alt}-${i}`}
+              media={m}
+            />
           ))}
           {project.sub?.flatMap((sub) =>
-            sub.media.map((m) => <MediaItem key={m.alt} media={m} />),
+            sub.media.map((m, i) => (
+              <MediaItem
+                key={m.type === "image" || m.type === "video" ? m.src : `${m.alt}-${i}`}
+                media={m}
+              />
+            )),
           )}
         </div>
       </div>

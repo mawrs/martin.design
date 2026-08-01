@@ -9,8 +9,7 @@ let ticking = false;
 let listening = false;
 
 /** Idle look — matches the previous dimmed treatment. */
-const IDLE_OPACITY = 0.4;
-const IDLE_BLUR_PX = 0.5;
+const IDLE_OPACITY = 0.07;
 /** Distance (as a fraction of viewport height) over which focus eases 0 → 1. Wider = slower. */
 const FOCUS_RANGE = 0.65;
 
@@ -25,10 +24,8 @@ function clearFocusStyles(root: HTMLElement) {
 }
 
 function applyFocus(root: HTMLElement, focus: number) {
-  const opacity = IDLE_OPACITY + (1 - IDLE_OPACITY) * focus;
-  const blur = IDLE_BLUR_PX * (1 - focus);
-  root.style.opacity = String(opacity);
-  root.style.filter = blur > 0.02 ? `blur(${blur}px)` : "none";
+  root.style.opacity = String(IDLE_OPACITY + (1 - IDLE_OPACITY) * focus);
+  root.style.filter = "none";
 }
 
 /** Continuous focus amount from distance to viewport center (Apple scrollTransition-style). */

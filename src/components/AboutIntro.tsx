@@ -54,11 +54,13 @@ export function AboutIntro() {
               {i < ABOUT.paragraphs.length - 1 && (
                 <div className="project-media">
                   <MediaItem
-                    media={{
-                      type: "color",
-                      tint: "var(--color-surface-subtle)",
-                      alt: `About image ${i + 1} placeholder`,
-                    }}
+                    media={
+                      ABOUT.media[i] ?? {
+                        type: "color",
+                        tint: "var(--color-surface-subtle)",
+                        alt: `About image ${i + 1} placeholder`,
+                      }
+                    }
                   />
                 </div>
               )}
