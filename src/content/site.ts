@@ -50,8 +50,8 @@ export const ABOUT = {
   paragraphs: [
     "I'm Martin Tejeda. Born and raised in San Diego, and now residing in Salt Lake City where I'm slowly turning into a snowboarder and a fly fisherman.",
     "My design career started at a creative agency called Underbelly. People hear agency and picture a room full of designers, but we had four departments — design, marketing, development, and video production. During my free time I used the cyc wall to sharpen my photography and videography skills.",
-    "After two years I took a risk and went out on my own. I ran a one-person studio and did the research, the design, and the development myself. If a client needed copywriting or motion design, I was there for that too. Somewhere in the middle of that I started building my own products. Transcript Shield is one of them, a tool that cleans up interview transcripts and strips out the PII before they get shared. I have to give a lot of credit to the advancements in AI for allowing me to create such tightly integrated AI workflows for research, design, and development.",
-    "Six years between the agency and my own studio made me curious about every discipline that goes into a company. I learned early that they all coexist, and that the design matters as much as the copy, which matters as much as the backend infrastructure holding it up.\n\nI'm dedicating the second half of 2026 to exploring in-house roles at companies that want a generalist who loves design and cares about the details while staying aware of the day to day work that brings it all together. Reach out and we can chat over a virtual coffee.",
+    "After two years I took a risk and branched out on my own. I ran a one-person studio and offered research, design, and development. Along the way I built internal tools to speed up my workflow. Transcript Shield is the latest, a tool that cleans up interview transcripts and strips out the PII before they get used in AI analysis.\n\nAI was a big part of why the one-person setup works. Over time I built a tight research-to-design-to-development workflow that let me move faster and get work to clients sooner.",
+    "Design, copywriting, engineering, and support are links on the same chain. A customer experiences all of it at once and doesn't care which team owned which part.\n\nThe tradeoff with contract work was seeing that chain from the outside. You're with a team for a finite amount of time. On shorter projects, you hand it off and leave before you get to see how it performed in the real world.\n\nI'm dedicating the second half of 2026 to finding an in-house role where I can stay with a product and a team past the handoff. If you're looking for a design generalist who cares about the craft as much as the overall company direction, reach out and we can chat over a virtual coffee.",
   ],
   /** Media shown after each paragraph block except the last */
   media: [
@@ -67,7 +67,7 @@ export const PROJECTS: Project[] = [
     slug: "facebook",
     logo: "/projects/facebook-logo.svg",
     logoHeight: 19,
-    lead: "Admins running three or more Pages got every notification in one stream, and they kept missing comments that needed a same-day answer.\n\nNotification ranking belonged to another team, so we worked inside the existing schema and shipped switching without the unified inbox we had sketched.\n\nI owned the notification settings, which meant deciding which Pages an admin hears from at all and which kinds of notifications come through from each one, so someone managing three Pages could turn off the ones they check weekly and still catch a comment on the one that matters.\n\nIt shipped as Cross-Profile Notifications.",
+    lead: "Facebook users running three or more Pages felt overwhelmed by the volume of notifications they got day to day.\n\nWe tested several solutions and landed on a way to toggle between notifications from different Pages without swapping the entire Facebook account.\n\nI worked on the Page-switching interaction and the notification settings, where admins chose which types of notifications they wanted and from which Pages.\n\nIt shipped as Cross-Profile Notifications.",
     media: [
       {
         type: "video",
@@ -86,7 +86,7 @@ export const PROJECTS: Project[] = [
     slug: "square",
     logo: "/projects/square-logo.svg",
     logoHeight: 19,
-    lead: "Sellers reported a spike in phishing attempts in 2020. On the Risk team we looked into it and found part of the problem was coming from us, because every department had built its own email templates and no two Square emails looked alike. A seller had no reliable way to tell a real one from a fake.\n\nNobody could force other teams to migrate, so I worked with the design system team on a component library and we moved the highest volume emails over ourselves as proof it worked.\n\nI owned the sender identity rules and the templates nobody wanted, which meant dynamic content, plain text fallbacks, and emails that still read as real with images blocked.\n\nFeel free to reach out to learn more about the results.",
+    lead: "A surge in phishing attempts on Square sellers prompted our team to revisit outgoing marketing workflows and risk profiles.\n\nAs it turned out, every department had built their own email templates over the years and no two Square emails looked alike. A seller had no reliable way to tell a real one from a fake.\n\nI worked with the design system team on a bespoke component library for emails, and we categorized them into seven thematic buckets.\n\nThe result was a structured email design system that stayed modular and on brand.",
     media: [
       {
         type: "video",
@@ -110,7 +110,7 @@ export const PROJECTS: Project[] = [
     slug: "slide",
     logo: "/projects/slide-logo.svg",
     logoHeight: 18,
-    lead: "At Slide, insurance claims were being processed over the phone, an average of 20 minutes per claim.\n\nWe spent a week in Tampa learning how agents triaged a claim over the phone, and turned that into a flow customers could complete themselves on the Slide website.\n\nI owned intake and its edge cases, which meant claims with more than one kind of damage, filings from someone who isn't the policyholder, and a lookup that fails halfway through.\n\nWithin six months, 45% of claims came in without a phone call.",
+    lead: "At Slide, insurance claims were being processed over the phone, an average of 20 minutes per claim.\n\nWe spent a week in Tampa learning how agents triaged a claim over the phone, and turned that into a flow customers could complete themselves on the Slide website.\n\nI owned the digitization of choosing the right claim online and providing the minimum information for Slide to get started.\n\nThe web app was a huge success. Within six months, 45% of claims came in without a phone call. Months later, Slide raised a $35M round to expand into other parts of Florida.",
     media: [
       {
         type: "video",
@@ -131,7 +131,7 @@ export const PROJECTS: Project[] = [
     slug: "southeast-bank",
     logo: "/projects/seb-logo.svg",
     logoHeight: 18,
-    lead: "Opening an account meant sitting with a branch manager while they clicked through an internal tool on your behalf. There was no version a customer could use alone.\n\nThey hired me to make it customer facing and to let someone open checking, savings, and a CD in one pass. That second part turned out to be a technical nightmare, so we scoped down to a single product flow and got one thing working properly instead of three things half working.\n\nI designed the whole deposit flow, from the first screen to funding, and I designed the states around it so a failed bank link, a transfer sitting pending for days, and someone returning a week later all had a defined screen.\n\nThat single product flow is the intake their customers use today.",
+    lead: "Opening an account at SouthEast Bank meant sitting with a branch manager while they clicked through an internal tool on your behalf. There was no version a customer could use alone.\n\nThey hired me to make it customer facing and to let someone open checking, savings, and CD accounts all in one pass. The multi-product flow turned out to be a technical nightmare, so we scoped down to a single product flow and let customers open one of those products at a time.\n\nI designed the deposit flow end-to-end, from the first screen to funding, including the states around insufficient funds, invalid KYC, and joint owner flows.\n\nThat single product flow is the intake their customers use today.",
     media: [
       {
         type: "video",
