@@ -19,6 +19,14 @@ export function SiteNav({ active }: { active: "work" | "about" }) {
         >
           About me
         </Link>
+        <a
+          href="/projects/martin_tejeda_resume.pdf"
+          className="site-nav__link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Resume
+        </a>
       </nav>
     </div>
   );
