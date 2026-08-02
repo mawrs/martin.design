@@ -26,6 +26,8 @@ export interface Project {
   slug?: string;
   /** Optional mark shown beside the project title */
   logo?: string;
+  /** Optional dark-theme mark; falls back to `logo` when omitted */
+  logoDark?: string;
   /** Logo height in px; width scales with aspect ratio. Default 22. */
   logoHeight?: number;
   lead: string;
@@ -85,6 +87,7 @@ export const PROJECTS: Project[] = [
     title: "Email design",
     slug: "square",
     logo: "/projects/square-logo.svg",
+    logoDark: "/projects/square-logo-darkmode.svg",
     logoHeight: 19,
     lead: "A surge in phishing attempts on Square sellers prompted our team to revisit outgoing marketing workflows and risk profiles.\n\nAs it turned out, every department had built their own email templates over the years and no two Square emails looked alike. A seller had no reliable way to tell a real one from a fake.\n\nI worked with the design system team on a bespoke component library for emails, and we categorized them into seven thematic buckets.\n\nThe result was a structured email design system that stayed modular and on brand.",
     media: [
@@ -109,6 +112,7 @@ export const PROJECTS: Project[] = [
     title: "Insurance claims intake",
     slug: "slide",
     logo: "/projects/slide-logo.svg",
+    logoDark: "/projects/slide-logo-darkmode.svg",
     logoHeight: 18,
     lead: "At Slide, insurance claims were being processed over the phone, an average of 20 minutes per claim.\n\nWe spent a week in Tampa learning how agents triaged a claim over the phone, and turned that into a flow customers could complete themselves on the Slide website.\n\nI owned the digitization of choosing the right claim online and providing the minimum information for Slide to get started.\n\nThe web app was a huge success. Within six months, 45% of claims came in without a phone call. Months later, Slide raised a $35M round to expand into other parts of Florida.",
     media: [
@@ -130,6 +134,7 @@ export const PROJECTS: Project[] = [
     title: "Bank account opening",
     slug: "southeast-bank",
     logo: "/projects/seb-logo.svg",
+    logoDark: "/projects/seb-logo-darkmode.svg",
     logoHeight: 18,
     lead: "Opening an account at SouthEast Bank meant sitting with a branch manager while they clicked through an internal tool on your behalf. There was no version a customer could use alone.\n\nThey hired me to make it customer facing and to let someone open checking, savings, and CD accounts all in one pass. The multi-product flow turned out to be a technical nightmare, so we scoped down to a single product flow and let customers open one of those products at a time.\n\nI designed the deposit flow end-to-end, from the first screen to funding, including the states around insufficient funds, invalid KYC, and joint owner flows.\n\nThat single product flow is the intake their customers use today.",
     media: [
@@ -151,6 +156,7 @@ export const PROJECTS: Project[] = [
     title: "Loan calculator",
     slug: "southeast-bank-loan-calculator",
     logo: "/projects/seb-logo.svg",
+    logoDark: "/projects/seb-logo-darkmode.svg",
     logoHeight: 18,
     lead: "Students were abandoning the loan application partway through, and the bank assumed it was the form. I talked to students and it was the rates. They were being asked to choose between fixed and variable without understanding what either one would cost them, so they closed the tab rather than guess.\n\nI designed a calculator that showed both rate types side by side over the life of the loan, so a student could see what variable actually means when it moves and pick with a reason instead of a guess.\n\nRebuilding the entire screen would have taken months we didn't have, so we placed it under the existing loan options where students were already deciding.",
     media: [

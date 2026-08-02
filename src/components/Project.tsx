@@ -29,6 +29,7 @@ export function Project({
                   <ProjectTitle
                     title={item.title}
                     logo={item.logo}
+                    logoDark={item.logoDark}
                     logoHeight={item.logoHeight}
                     as="h2"
                   />
@@ -47,6 +48,7 @@ export function Project({
                 <ProjectTitle
                   title={item.title}
                   logo={item.logo}
+                  logoDark={item.logoDark}
                   logoHeight={item.logoHeight}
                 />
               </ProjectNavLink>

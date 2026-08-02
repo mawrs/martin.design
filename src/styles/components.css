@@ -201,6 +201,18 @@ a:focus,
   transition: opacity var(--duration-fast) var(--ease);
 }
 
+.project-title__logo--dark {
+  display: none;
+}
+
+[data-theme="dark"] .project-title__logo--light {
+  display: none;
+}
+
+[data-theme="dark"] .project-title__logo--dark {
+  display: block;
+}
+
 .project-title__divider {
   width: var(--border-hairline);
   height: 16px;
