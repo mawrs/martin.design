@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import posthog from "posthog-js";
 import {
   applyTheme,
   resolveInitialTheme,
@@ -22,6 +23,7 @@ export function ThemeToggle() {
     const next: ThemeId = theme === "light" ? "dark" : "light";
     applyTheme(next);
     setTheme(next);
+    posthog.capture("theme_changed", { theme: next });
   };
 
   if (!ready) {
