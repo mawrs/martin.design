@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import posthog from "posthog-js";
 import { ProjectTitle } from "./ProjectTitle";
 
 export function HomeNavLink({
@@ -36,6 +37,7 @@ export function HomeNavLink({
       type="button"
       className="project-nav-link"
       onClick={() => {
+        posthog.capture("portfolio_home_selected");
         window.scrollTo({ top: 0, behavior: "smooth" });
         if (window.location.hash) {
           history.replaceState(null, "", window.location.pathname + window.location.search);

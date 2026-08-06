@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import posthog from "posthog-js";
 import { BrandMark } from "./BrandMark";
 
 export function SiteNav({ active }: { active: "work" | "about" }) {
@@ -24,6 +27,7 @@ export function SiteNav({ active }: { active: "work" | "about" }) {
           className="site-nav__link"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => posthog.capture("resume_opened")}
         >
           Resume
         </a>

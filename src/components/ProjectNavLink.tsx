@@ -1,5 +1,7 @@
 "use client";
 
+import posthog from "posthog-js";
+
 function clearHash() {
   if (window.location.hash) {
     history.replaceState(null, "", window.location.pathname + window.location.search);
@@ -26,6 +28,7 @@ export function ProjectNavLink({ id, children }: { id: string; children: React.R
       type="button"
       className="project-nav-link"
       onClick={() => {
+        posthog.capture("project_selected", { project_id: id });
         scrollMediaIntoView(id);
         clearHash();
       }}
