@@ -226,6 +226,10 @@ a:focus,
 }
 
 .project-nav-item.is-active .project-title {
+  color: var(--color-disabled-text);
+}
+
+.project.is-current .project-nav-item.is-active .project-title {
   color: var(--color-primary-text);
 }
 

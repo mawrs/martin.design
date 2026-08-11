@@ -1,3 +1,4 @@
+import type { ComponentProps } from "react";
 import type { Project as ProjectData } from "@/content/site";
 import { projectSlug } from "@/lib/projectSlug";
 import { HomeNavLink } from "./HomeNavLink";
@@ -9,16 +10,20 @@ export function Project({
   project,
   projects,
   id,
+  homeNav,
+  isCurrent,
 }: {
   project: ProjectData;
   projects: ProjectData[];
   id: string;
+  homeNav?: ComponentProps<typeof HomeNavLink>;
+  isCurrent: boolean;
 }) {
   return (
-    <section className="project" id={id}>
+    <section className={`project${isCurrent ? " is-current" : ""}`} id={id}>
       <div className="project-content">
         <div className="project-text">
-          <HomeNavLink />
+          <HomeNavLink {...homeNav} />
           {projects.map((item) => {
             const itemId = projectSlug(item);
             const active = itemId === id;

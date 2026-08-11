@@ -45,6 +45,84 @@ export const SITE = {
   year: 2026,
 };
 
+export const AI_WORKFLOW = {
+  title: "Design workflow — Martin Tejeda",
+  description:
+    "How I use AI across research, design, and development to move faster without losing craft.",
+  intro: [
+    "Over the last few years I’ve slowly decreased the hours spent in Figma in favor of a more agentic workflow that closes the loop on research, design, and development.",
+    "My workflow revolves heavily around Cursor’s IDE to make pixel-perfect design changes and Vercel for prototype testing.",
+    "This workflow still works for me as of August 2026, but things change. Check out my process below, and the tools I use at each step.",
+  ],
+};
+
+export const AI_WORKFLOW_STAGES: Project[] = [
+  {
+    title: "Research",
+    lead: "I use Claude for a lot of my research-related work. For competitor analysis, I have a few Claude Skills to map out the competitive landscape of a new feature or product space we are trying to enter.\n\nI also use Claude to draft discussion guides to prepare for user interviews.\n\nFor research synthesis, I’ve actually built my own tool called Peridot that synthesizes user feedback and retrieves clips for me to use as evidence.",
+    media: [
+      {
+        type: "video",
+        src: "/ai-workflow/research_1.mp4",
+        alt: "Analyzing the competitive landscape in Claude",
+      },
+      {
+        type: "video",
+        src: "/ai-workflow/research_2.mp4",
+        alt: "Pulling user insights & creating a highlight reel",
+      },
+    ],
+  },
+  {
+    title: "Exploration",
+    lead: "If I’m testing out a new feature, I will build it directly in Cursor to understand the potential shape it can take within the product.\n\nIf I need further exploration, I’ll take this Cursor-generated design and paste it into Figma Make to create five additional versions of the design. If I take this additional step, it’s because the feature or product direction is fresh and could benefit from a broad set of directions.",
+    media: [
+      {
+        type: "video",
+        src: "/ai-workflow/exploration_1.mp4",
+        alt: "Generating a new design in Cursor",
+      },
+      {
+        type: "video",
+        src: "/ai-workflow/exploration_2.mp4",
+        alt: "Creating design variations in Figma Make",
+      },
+    ],
+  },
+  {
+    title: "Refinement",
+    lead: "Once I’ve decided on a direction, I’ll spec out the final design using the design system.\n\nUsing Figma’s MCP, I will then feed the new design back into Cursor and refactor the Cursor-generated design using proper components that match our styles.\n\nThe “final” design that is now in Cursor gets documented in Figma for the rest of the team to see. I try to include all design iterations and the thinking that went behind choosing the final design in case we ever want to revert to an old design or go another direction.",
+    media: [
+      {
+        type: "video",
+        src: "/ai-workflow/refinement_1.mp4",
+        alt: "Converting designs into code with the Figma MCP",
+      },
+      {
+        type: "video",
+        src: "/ai-workflow/refinement_2.mp4",
+        alt: "Documenting designs in Figma",
+      },
+    ],
+  },
+  {
+    title: "User Testing",
+    lead: "Once the new design is in Cursor, I will run a few tests to make sure it passes all the build tests. I use Macroscope as my preferred code review bot. More often than not, it catches things that I should fix in the PR.\n\nSince I host on Vercel, I can leave the build in staging and provide a link directly to users to begin conducting user testing. I’ve experimented with cloning my entire repo to have a “Demo Repo” but it was a lot of work to maintain the exact same design on both repos. I found it easier to test in staging and iterate on that branch until the PR was ready for review.",
+    media: [
+      {
+        type: "video",
+        src: "/ai-workflow/usertesting_1.mp4",
+        alt: "Debugging with Macroscope",
+      },
+      {
+        type: "video",
+        src: "/ai-workflow/usertesting_2.mp4",
+        alt: "Testing out the latest updates in Vercel Preview",
+      },
+    ],
+  },
+];
+
 export const ABOUT = {
   title: "About Martin Tejeda",
   description:
@@ -57,9 +135,9 @@ export const ABOUT = {
   ],
   /** Media shown after each paragraph block except the last */
   media: [
-    { type: "image" as const, src: "/projects/fishing.webp", alt: "Fly fishing in Montana" },
-    { type: "image" as const, src: "/projects/underbelly.webp", alt: "Underbelly team photo" },
-    { type: "video" as const, src: "/projects/ts-demo.mp4", alt: "Transcript Shield demo" },
+    { type: "image" as const, src: "/about-me/fishing.webp", alt: "Fly fishing in Montana" },
+    { type: "image" as const, src: "/about-me/underbelly.webp", alt: "Underbelly team photo" },
+    { type: "video" as const, src: "/about-me/ts-demo.mp4", alt: "Transcript Shield demo" },
   ] satisfies Media[],
 };
 

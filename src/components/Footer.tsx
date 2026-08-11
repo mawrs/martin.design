@@ -14,6 +14,14 @@ export function Footer() {
           <TextLink href={SITE.linkedin} target="_blank" rel="noopener noreferrer">
             LinkedIn
           </TextLink>
+          &nbsp;·&nbsp;
+          <TextLink
+            href="/projects/martin_tejeda_resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Resume
+          </TextLink>
         </p>
       </div>
       <ThemeToggle />
