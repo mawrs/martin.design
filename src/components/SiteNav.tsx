@@ -1,7 +1,4 @@
-"use client";
-
 import Link from "next/link";
-import posthog from "posthog-js";
 import { BrandMark } from "./BrandMark";
 
 export function SiteNav({ active }: { active: "work" | "about" | "design-workflow" }) {
@@ -29,15 +26,6 @@ export function SiteNav({ active }: { active: "work" | "about" | "design-workflo
         >
           About me
         </Link>
-        <a
-          href="/projects/martin_tejeda_resume.pdf"
-          className="site-nav__link"
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={() => posthog.capture("resume_opened")}
-        >
-          Resume
-        </a>
       </nav>
     </div>
   );

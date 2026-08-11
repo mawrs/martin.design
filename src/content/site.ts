@@ -75,7 +75,7 @@ export const AI_WORKFLOW_STAGES: Project[] = [
   },
   {
     title: "Exploration",
-    lead: "If I’m testing out a new feature, I will build it directly in Cursor to understand the potential shape it can take within the product.\n\nIf I need further exploration, I’ll take this Cursor-generated design and paste it into Figma Make to create five additional versions of the design. If I take this additional step, it’s because the feature or product direction is fresh and could benefit from a broad set of directions.",
+    lead: "If I’m testing out a new feature, I will build it directly in Cursor to understand the potential shape it can take within the product.\n\nIf the feature or product direction is less defined and needs further exploration, I’ll take the Cursor-generated design and paste it into Figma Make to create five additional versions to explore a broader range of directions.",
     media: [
       {
         type: "video",
@@ -91,7 +91,7 @@ export const AI_WORKFLOW_STAGES: Project[] = [
   },
   {
     title: "Refinement",
-    lead: "Once I’ve decided on a direction, I’ll spec out the final design using the design system.\n\nUsing Figma’s MCP, I will then feed the new design back into Cursor and refactor the Cursor-generated design using proper components that match our styles.\n\nThe “final” design that is now in Cursor gets documented in Figma for the rest of the team to see. I try to include all design iterations and the thinking that went behind choosing the final design in case we ever want to revert to an old design or go another direction.",
+    lead: "Once I’ve decided on a direction, I’ll spec out the final design using the design system.\n\nUsing Figma’s MCP, I will then feed the new design back into Cursor and refactor the Cursor-generated design using proper components that match our styles.\n\nThe final design also gets documented in Figma for the rest of the team to see. I try to include all design iterations and the thinking that went behind choosing the final design in case we ever want to revert to an old design or go another direction.",
     media: [
       {
         type: "video",
@@ -107,7 +107,7 @@ export const AI_WORKFLOW_STAGES: Project[] = [
   },
   {
     title: "User Testing",
-    lead: "Once the new design is in Cursor, I will run a few tests to make sure it passes all the build tests. I use Macroscope as my preferred code review bot. More often than not, it catches things that I should fix in the PR.\n\nSince I host on Vercel, I can leave the build in staging and provide a link directly to users to begin conducting user testing. I’ve experimented with cloning my entire repo to have a “Demo Repo” but it was a lot of work to maintain the exact same design on both repos. I found it easier to test in staging and iterate on that branch until the PR was ready for review.",
+    lead: "After pushing the PR to Github, I run Macroscope to review my code and flag any potential issues.\n\nEach PR gets a Vercel Preview link I can send to users for testing. As feedback comes in, I iterate on that same branch.\n\nI’ve experimented with cloning my entire repo to have a “Demo Repo” but it was a lot of work to maintain the exact same design on both repos.",
     media: [
       {
         type: "video",
