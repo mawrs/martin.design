@@ -123,6 +123,10 @@ a:focus,
   margin: var(--space-divider) 0;
 }
 
+.playlab-intro-divider {
+  margin: var(--space-sm) 0;
+}
+
 @media (max-width: 1024px) {
   .divider {
     max-width: var(--prose-max);
