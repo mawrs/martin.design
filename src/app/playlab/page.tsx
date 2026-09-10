@@ -7,7 +7,7 @@ import { SiteNav } from "@/components/SiteNav";
 import { TextLink } from "@/components/TextLink";
 
 const PLAYLAB_PARAGRAPHS = [
-  "I’ve spent my career at the intersection of education, community work, product design, and now AI. Playlab is one of the rare companies where all four intersect.",
+  "My career has taken a few turns through community work, education, product design, and now AI. Somehow, they all lead me to Playlab.",
   "In 2016, I helped start a nonprofit resource center after spending months canvassing South Los Angeles and talking directly with local business owners. We wanted to understand what they actually needed, then connect them with resources and support already available in their community.",
   "That work eventually caught the attention of the City of Los Angeles, and our team was recognized by the Mayor's Office for our work supporting local communities.",
   "At the same time, I was working at a local hospital teaching pediatric obesity management. We taught kids how to exercise and make healthier food choices. Our cohorts culminated in a grocery shopping spree at Food 4 Less to put their new knowledge to work.",
