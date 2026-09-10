@@ -84,6 +84,7 @@ a,
   text-decoration: none;
   font-family: var(--font-body);
   font-weight: var(--weight-semibold);
+  display: inline-block;
   position: relative;
   transition: color var(--duration-fast) var(--ease);
 }

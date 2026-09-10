@@ -1,7 +1,11 @@
 import Link from "next/link";
 import { BrandMark } from "./BrandMark";
 
-export function SiteNav({ active }: { active: "work" | "about" | "design-workflow" }) {
+export function SiteNav({
+  active,
+}: {
+  active?: "work" | "about" | "design-workflow";
+}) {
   return (
     <div className="site-nav">
       <Link

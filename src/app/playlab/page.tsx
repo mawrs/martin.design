@@ -13,7 +13,7 @@ const PLAYLAB_PARAGRAPHS = [
   "At the same time, I was working at a local hospital teaching pediatric obesity management. We taught kids how to exercise and make healthier food choices. Our cohorts culminated in a grocery shopping spree at Food 4 Less to put their new knowledge to work.",
   "About a year later, I pitched the program to local schools. We received funding to expand it and began teaching the curriculum directly in classrooms after school.",
   "Trying to grow that program is actually what introduced me to design. I wanted to build a website and better communicate what we were doing, which eventually led me to UX and General Assembly. I didn't expect it at the time, but that curiosity completely changed my career.",
-  "Seven years into my design career, I find myself coming back to a lot of the same things that got me started: education, building tools for people, and learning directly from the communities using them. The difference is that now I have years of product experience and I’m building with AI myself. That’s what made Playlab immediately stand out to me.",
+  "Seven years into my design career, I find myself coming back to a lot of the same things that got me started: education, building tools for people, and learning directly from the communities using them. The difference is that now I have years of product experience and I’m building with AI. My background may be unconventional for a product designer, but for this role, I think it’s exactly what makes me the perfect candidate.",
 ];
 
 const PLAYLAB_MEDIA: (Media | null)[] = [
@@ -60,7 +60,7 @@ export default function PlaylabPage() {
     <Shell>
       <div className="project-content" id="playlab-intro">
         <div className="project-text">
-          <SiteNav active="work" />
+          <SiteNav />
         </div>
         <div className="header-text about-intro-body">
           {PLAYLAB_PARAGRAPHS.map((paragraph, index) => {
@@ -80,8 +80,9 @@ export default function PlaylabPage() {
                       the same things that got me started: education, building tools for people,
                       and learning directly from the communities using them. The difference is
                       that now I have years of product experience and I’m{" "}
-                      <TextLink href="/design-workflow">building with AI myself</TextLink>.
-                      That’s what made Playlab immediately stand out to me.
+                      <TextLink href="/design-workflow">building with AI</TextLink>. My background
+                      may be unconventional for a product designer, but for this role, I think
+                      it’s exactly what makes me the perfect candidate.
                     </p>
                   ) : (
                     <p>{paragraph}</p>
