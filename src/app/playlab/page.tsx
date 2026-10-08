@@ -80,7 +80,7 @@ export default function PlaylabPage() {
                       the same things that got me started: education, building tools for people,
                       and learning directly from the communities using them. The difference is
                       that now I have years of product experience and I’m{" "}
-                      <TextLink href="/design-workflow">building with AI</TextLink>. My background
+                      <TextLink href="/ai-workflow">building with AI</TextLink>. My background
                       may be unconventional for a product designer, but for this role, I think
                       it’s exactly what makes me the perfect candidate.
                     </p>

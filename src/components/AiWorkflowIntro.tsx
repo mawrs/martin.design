@@ -5,7 +5,7 @@ export function AiWorkflowIntro() {
   return (
     <div className="project-content" id="intro">
       <div className="project-text">
-        <SiteNav active="design-workflow" />
+        <SiteNav active="ai-workflow" />
       </div>
       <div className="header-text">
         <h1>

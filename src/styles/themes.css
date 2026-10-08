@@ -6,7 +6,7 @@
 
 :root,
 [data-theme="light"] {
-  --color-bg: var(--p-ivory-light);
+  --color-bg: var(--p-white);
   --color-primary-text: var(--p-slate-dark);
   --color-secondary-text: var(--p-arsenic);
   --color-disabled-text: var(--p-stone);

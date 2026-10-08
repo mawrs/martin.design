@@ -20,7 +20,7 @@ export default function RootLayout({
           }}
         />
         <meta name="color-scheme" content="light dark" />
-        <meta name="theme-color" content={primitives.color.ivoryLight} />
+        <meta name="theme-color" content={primitives.color.white} />
       </head>
       <body>{children}</body>
     </html>

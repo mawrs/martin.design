@@ -32,7 +32,7 @@ export const themes: Record<ThemeId, Theme> = {
   light: {
     id: "light",
     color: {
-      bg: c.ivoryLight,
+      bg: c.white,
       primaryText: c.slateDark,
       secondaryText: c.arsenic,
       disabledText: c.stone,
@@ -49,7 +49,7 @@ export const themes: Record<ThemeId, Theme> = {
       emphasis: font.medium,
     },
     meta: {
-      themeColor: c.ivoryLight,
+      themeColor: c.white,
     },
   },
   dark: {

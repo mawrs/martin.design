@@ -23,12 +23,21 @@ export function ThemeToggle() {
     const next: ThemeId = theme === "light" ? "dark" : "light";
     applyTheme(next);
     setTheme(next);
-    posthog.capture("theme_changed", { theme: next });
+    try {
+      posthog.capture("theme_changed", { theme: next });
+    } catch {
+      /* analytics must not block the theme change */
+    }
   };
 
   if (!ready) {
     return (
-      <button className="theme-toggle" aria-label="Toggle theme" type="button" />
+      <button
+        className="theme-toggle"
+        aria-label="Toggle theme"
+        type="button"
+        onClick={toggle}
+      />
     );
   }
 

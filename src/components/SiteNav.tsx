@@ -4,7 +4,7 @@ import { BrandMark } from "./BrandMark";
 export function SiteNav({
   active,
 }: {
-  active?: "work" | "about" | "design-workflow";
+  active?: "work" | "about" | "ai-workflow";
 }) {
   return (
     <div className="site-nav">
@@ -17,11 +17,11 @@ export function SiteNav({
       </Link>
       <nav className="site-nav__links" aria-label="Site">
         <Link
-          href="/design-workflow"
-          className={`site-nav__link${active === "design-workflow" ? " is-active" : ""}`}
-          aria-current={active === "design-workflow" ? "page" : undefined}
+          href="/ai-workflow"
+          className={`site-nav__link${active === "ai-workflow" ? " is-active" : ""}`}
+          aria-current={active === "ai-workflow" ? "page" : undefined}
         >
-          Design workflow
+          AI workflow
         </Link>
         <Link
           href="/about"

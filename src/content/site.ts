@@ -46,13 +46,13 @@ export const SITE = {
 };
 
 export const AI_WORKFLOW = {
-  title: "Design workflow — Martin Tejeda",
+  title: "AI workflow — Martin Tejeda",
   description:
     "How I use AI across research, design, and development to move faster without losing craft.",
   intro: [
     "Over the last few years I’ve slowly decreased the hours spent in Figma in favor of a more agentic workflow that closes the loop on research, design, and development.",
     "My workflow revolves heavily around Cursor’s IDE to make pixel-perfect design changes and Vercel for prototype testing.",
-    "This workflow still works for me as of August 2026, but things change. Check out my process below, and the tools I use at each step.",
+    "This workflow still works for me as of October 2026, but things change. Check out my process below, and the tools I use at each step.",
   ],
 };
 

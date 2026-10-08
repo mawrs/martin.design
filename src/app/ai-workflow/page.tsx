@@ -11,14 +11,14 @@ export const metadata: Metadata = {
   description: AI_WORKFLOW.description,
 };
 
-export default function DesignWorkflowPage() {
+export default function AiWorkflowPage() {
   return (
     <Shell>
       <AiWorkflowIntro />
       <Divider />
       <Projects
         projects={AI_WORKFLOW_STAGES}
-        homeNav={{ label: "Design workflow", logo: "" }}
+        homeNav={{ label: "AI workflow", logo: "" }}
       />
       <Footer />
     </Shell>
